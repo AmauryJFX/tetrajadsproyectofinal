@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegador"
+    app:startDestination="@id/welcomeActivity">
+
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.myapplication.account"
+        android:label="account" >
+        <action
+            android:id="@+id/action_account_to_welcomeActivity2"
+            app:destination="@id/welcomeActivity" />
+        <action
+            android:id="@+id/action_account_to_welcomeActivity22"
+            app:destination="@id/welcomeActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/welcomeActivity"
+        android:name="com.example.myapplication.WelcomeActivity"
+        android:label="WelcomeActivity" />
+    <fragment
+        android:id="@+id/welcomeActivity2"
+        android:name="com.example.myapplication.WelcomeActivity2"
+        android:label="fragment_welcome_activity2"
+        tools:layout="@layout/fragment_welcome_activity2" />
+
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.example.myapplication.SellFragment"
+        android:label="Vender">
+        <action
+            android:id="@+id/action_sellFragment_to_publicarventa"
+            app:destination="@id/publicarventa" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/publicarventa"
+        android:name="com.example.myapplication.PublicarVenta"
+        android:label="Publicar venta" />
+
+
+</navigation>

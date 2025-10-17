@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SaberShare</string>
+    <string name="login_title">Iniciar sesion</string>
+    <string name="register_title">Crear cuenta</string>
+    <string name="email">Correo electronico</string>
+    <string name="password">Contrasena</string>
+    <string name="confirm_password">Confirmar contrasena</string>
+    <string name="btn_login">Iniciar sesion</string>
+    <string name="btn_register">Registrarse</string>
+    <string name="btn_create_account">Crear cuenta</string>
+    <string name="cta_have_account">Ya tienes cuenta? Inicia sesion</string>
+    <string name="cta_no_account">No tienes cuenta? Registrate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
