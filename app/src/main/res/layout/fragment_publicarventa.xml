@@ -32,20 +32,20 @@
             android:id="@+id/tvTipo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo: Curso (pregrabado)"
+            android:text="Tipo:"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#2E70FF"
             android:layout_marginBottom="10dp" />
 
-        <!-- Card de información -->
+        <!-- Card con fondo lila (el rosita bonito) -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardResumen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp">
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#F5EEFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,61 +53,55 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Título del curso/clase -->
+                <!-- Título -->
                 <TextView
-                    android:id="@+id/tvTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Título:"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="#20232A" />
-
                 <TextView
                     android:id="@+id/tvTituloValor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ejemplo de curso"
+                    android:text=""
                     android:textSize="16sp"
                     android:layout_marginBottom="8dp" />
 
                 <!-- Descripción -->
                 <TextView
-                    android:id="@+id/tvDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Descripción:"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="#20232A" />
-
                 <TextView
                     android:id="@+id/tvDescripcionValor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aquí va la descripción del curso o clase."
+                    android:text=""
                     android:textSize="16sp"
                     android:layout_marginBottom="8dp" />
 
                 <!-- Precio -->
                 <TextView
-                    android:id="@+id/tvPrecio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Precio:"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="#20232A" />
-
                 <TextView
                     android:id="@+id/tvPrecioValor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="$999 MXN"
+                    android:text=""
                     android:textSize="16sp"
                     android:layout_marginBottom="8dp" />
 
-                <!-- Archivo o fecha/hora -->
+                <!-- Archivo o Fecha/Hora -->
                 <TextView
                     android:id="@+id/tvExtraLabel"
                     android:layout_width="match_parent"
@@ -116,38 +110,41 @@
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="#20232A" />
-
                 <TextView
                     android:id="@+id/tvExtraValor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ejemplo.pdf"
+                    android:text=""
                     android:textSize="16sp" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Texto resumen final -->
+        <!-- (Opcional) texto resumen plain escondido, por si lo quieres conservar -->
         <TextView
             android:id="@+id/tvResumen"
+            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="(Aquí aparecerá el resumen general)"
-            android:textSize="15sp"
-            android:textColor="#444"
-            android:lineSpacingExtra="3dp"
-            android:layout_marginBottom="24dp" />
+            android:layout_height="wrap_content" />
 
-        <!-- Botón volver -->
+        <!-- Botones -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRegresar"
+            android:id="@+id/btnConfirmar"
             style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Volver"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:text="Confirmar"
             app:backgroundTint="#2E70FF"
             android:textColor="@android:color/white"
             app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:text="Volver" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
