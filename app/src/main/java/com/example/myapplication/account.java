@@ -15,6 +15,7 @@ public class account extends Fragment implements View.OnClickListener {
 
     private Button btnCerrarSesion;
     private Button btnVerHistorial;
+    private Button btnEstadisticas;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -28,9 +29,11 @@ public class account extends Fragment implements View.OnClickListener {
 
         btnCerrarSesion  = view.findViewById(R.id.btnCerrarSesion);
         btnVerHistorial  = view.findViewById(R.id.btnHistorial);
+        btnEstadisticas = view.findViewById(R.id.btnEstadisticas);
 
         btnCerrarSesion.setOnClickListener(this);
         btnVerHistorial.setOnClickListener(this);
+        btnEstadisticas.setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +58,12 @@ public class account extends Fragment implements View.OnClickListener {
             tx.replace(R.id.mainContainer, new Historial())
                     .addToBackStack(null)
                     .commit();
+        }else if (id == R.id.btnEstadisticas) {
+            // Ir a estadisticas (y permitir volver con "atrás")
+            tx.replace(R.id.mainContainer, new Estadisticas())
+                    .addToBackStack(null)
+                    .commit();
         }
     }
 }
+

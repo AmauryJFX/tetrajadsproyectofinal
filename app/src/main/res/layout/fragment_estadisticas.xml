@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#F6F8FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Encabezado grande -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTituloEstadisticas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Estadísticas"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#20232A" />
+
+            <TextView
+                android:id="@+id/tvSubtituloEstadisticas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen"
+                android:textSize="14sp"
+                android:textColor="#6C737D" />
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <!-- Tarjeta grande de métricas principales -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="6dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Primera fila: Cursos completados (grande) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cursos completados"
+                        android:textSize="16sp"
+                        android:textColor="#6C737D" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvCursosCompletados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#20232A" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+                <!-- Segunda fila: Clases 1-a-1 completadas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clases 1-a-1"
+                        android:textSize="16sp"
+                        android:textColor="#6C737D" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvClases1a1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#20232A" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="12dp" />
+
+                <!-- Tercera fila: Ingresos totales (destacado) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingresos totales"
+                        android:textSize="16sp"
+                        android:textColor="#6C737D" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvIngresosTotales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E70FF" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+                <!-- Cursos activos (ocupa todo el ancho ahora que se quitó tasa de retención) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cursos activos"
+                        android:textColor="#6C737D" />
+
+                    <TextView
+                        android:id="@+id/tvCursosActivos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#20232A"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+                <!-- Ingresos últimos 30d -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingresos último 30d"
+                        android:textColor="#6C737D" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvIngresos30d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textStyle="bold"
+                        android:textColor="#2E70FF" />
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+                <!-- Última actividad -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Última actividad"
+                    android:textColor="#6C737D" />
+
+                <TextView
+                    android:id="@+id/tvUltimaActividad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#20232A" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View android:layout_width="match_parent" android:layout_height="20dp" />
+
+        <!-- Botón volver -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVolverEstadisticas"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Volver"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#2E70FF"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     f = new SellFragment();     // <- usa el nombre correcto de la clase
                 } else if (id == R.id.nav_account) {
                     f = new account();          // <- tu clase 'account' existe según el árbol
+                } else if (id == R.id.nav_mensajes) {
+                    f = new Mensajes();          // <- tu clase 'account' existe según el árbol
                 }
 
                 if (f != null) {

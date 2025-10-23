@@ -16,4 +16,8 @@
         android:id="@+id/nav_account"
         android:title="Cuenta"
         android:icon="@drawable/cuentaa"/>
+    <item
+        android:id="@+id/nav_mensajes"
+        android:icon="@drawable/mensajes"
+        android:title="Mensajes" />
 </menu>
