@@ -168,7 +168,7 @@
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- Datos editables -->
+        <!-- Datos fijos (no editables) -->
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
@@ -180,6 +180,8 @@
                 android:id="@+id/etNombrePublico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Amaury"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,7 +196,8 @@
                 android:id="@+id/etCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:enabled="false"
+                android:text="amaury@example.com"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 

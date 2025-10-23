@@ -75,10 +75,7 @@ public class SellFragment extends Fragment implements View.OnClickListener {
                 args.putString("fechaStr", fechaStr);
                 args.putString("horaStr", horaStr);
 
-                // Si tuvieras millis y enteros, también podrías pasarlos:
-                // args.putLong("fechaUtc", selectedDateUtc);
-                // args.putInt("hora", selectedHour);
-                // args.putInt("minuto", selectedMinute);
+
             }
 
             // Crear destino y pasar argumentos

@@ -10,21 +10,13 @@
         android:name="com.example.myapplication.account"
         android:label="account" >
         <action
-            android:id="@+id/action_account_to_welcomeActivity2"
-            app:destination="@id/welcomeActivity" />
-        <action
-            android:id="@+id/action_account_to_welcomeActivity22"
-            app:destination="@id/welcomeActivity2" />
+            android:id="@+id/action_account_to_historial"
+            app:destination="@id/historial" />
     </fragment>
     <activity
         android:id="@+id/welcomeActivity"
         android:name="com.example.myapplication.WelcomeActivity"
         android:label="WelcomeActivity" />
-    <fragment
-        android:id="@+id/welcomeActivity2"
-        android:name="com.example.myapplication.WelcomeActivity2"
-        android:label="fragment_welcome_activity2"
-        tools:layout="@layout/fragment_welcome_activity2" />
 
     <fragment
         android:id="@+id/sellFragment"
@@ -42,6 +34,24 @@
         android:id="@+id/publicarventa"
         android:name="com.example.myapplication.PublicarVenta"
         android:label="Publicar venta" />
+    <fragment
+        android:id="@+id/historial"
+        android:name="com.example.myapplication.Historial"
+        android:label="fragment_historial"
+        tools:layout="@layout/fragment_historial" />
+    <fragment
+        android:id="@+id/buy"
+        android:name="com.example.myapplication.buy"
+        android:label="buy" >
+        <action
+            android:id="@+id/action_buy_to_agendarcita"
+            app:destination="@id/agendarcita" />
+    </fragment>
+    <fragment
+        android:id="@+id/agendarcita"
+        android:name="com.example.myapplication.Agendarcita"
+        android:label="fragment_agendarcita"
+        tools:layout="@layout/fragment_agendarcita" />
 
 
 </navigation>

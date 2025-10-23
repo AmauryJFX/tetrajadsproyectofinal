@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agendarRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    android:padding="16dp"
+    tools:context=".Agendarcita">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agendar cita"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#1E2A78" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/tvEjemplo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Alumno con dudas en cálculo integral puede contratar un curso completo ($299 MXN) o una clase personalizada 1:1."
+            android:textColor="#6B7280"
+            android:textSize="13sp" />
+
+        <!-- Card modalidad -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#1565C0"
+            app:strokeWidth="1dp"
+            android:backgroundTint="#FAFBFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Modalidad"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#1E2A78" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipClase"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clase 1:1"
+                        android:textColor="#1E2A78"
+                        app:chipBackgroundColor="@android:color/white"
+                        app:chipStrokeColor="#1E88E5"
+                        app:chipStrokeWidth="1dp"
+                        app:checkedIconVisible="false"
+                        android:checkable="true" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card calendario + hora -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#1565C0"
+            app:strokeWidth="1dp"
+            android:backgroundTint="#FAFBFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha del servicio"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#1E2A78" />
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:firstDayOfWeek="2"
+                    android:focusedMonthDateColor="#0D47A1"
+                    android:unfocusedMonthDateColor="#90A4AE"
+                    android:weekSeparatorLineColor="#1E88E5" />
+
+                <!-- Hora -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Hora (solo para Clase 1:1)"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@android:drawable/ic_menu_recent_history">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"
+                        tools:text="16:00" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- Botón confirmar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmarAgenda"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:text="Agendar"
+            android:textStyle="bold"
+            android:textColor="#1E2A78"
+            app:cornerRadius="16dp"
+            android:background="@drawable/btn_agendar_bg"
+            android:elevation="4dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
